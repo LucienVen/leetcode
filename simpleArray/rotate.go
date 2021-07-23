@@ -14,15 +14,23 @@ func Rotate(nums []int, k int)  {
 		return
 	}
 
+	if k > len(nums) {
+		k = k%len(nums)
+	}
+
 	temp := make([]int, 0)
 	for i := 0; i < len(nums); i++ {
-		index := ((i+k)-len(nums))%len(nums) // 余数计算
-		fmt.Println("index", index)
+		index := (i+len(nums)-k)%len(nums) // 余数计算
+		//fmt.Println("index", index)
 		//nums[i], nums[index] = nums[index], nums[i]
-		//temp = append(temp, nums[index])
+		temp = append(temp, nums[index])
+	}
+
+	for index, value := range temp {
+		nums[index] = value
 	}
 
 
 
-	fmt.Println(temp)
+	fmt.Println(nums)
 }
