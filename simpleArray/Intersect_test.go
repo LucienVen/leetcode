@@ -23,3 +23,10 @@ func TestIntersect(t *testing.T) {
 	fmt.Println(res)
 
 }
+
+func TestIntersect3(t *testing.T) {
+	nums1 := []int{4,9,5}
+	nums2 := []int{9,4,9,8,4}
+	res := Intersect3(nums1, nums2)
+	fmt.Println(res)
+}
