@@ -23,3 +23,8 @@ func BubbleSort(old []int) []int {
 
 	return old
 }
+
+// 快速排序
+//func QuickSort(data []int) []int {
+//
+//}
