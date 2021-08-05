@@ -22,7 +22,26 @@ func StrStr(haystack string, needle string) int {
 		}
 	}
 
-	for _, i2 := range collection {
-		
+	flag := needle[0]
+
+	for index, letter := range haystack {
+		if letter == int32(flag) {
+			right := index+len(needle)
+			if right > len(haystack) {
+				continue
+			}
+			// 开始截断
+			//fmt.Println("index:", index, " | index+len(needle):", index+len(needle))
+			//fmt.Println("haystack[index:index+len(needle)]", haystack[index:index+len(needle)])
+
+
+
+			if haystack[index:index+len(needle)] == needle {
+				return index
+			}
+		}
+
 	}
+
+	return -1
 }

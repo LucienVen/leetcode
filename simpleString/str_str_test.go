@@ -10,8 +10,9 @@ import (
 )
 
 func TestStrStr(t *testing.T) {
-	haystack := "hello"
-	needle := "ll"
+	haystack := "mississippi"
+	needle := "issipi"
+
 
 	res := StrStr(haystack, needle)
 	fmt.Println("res:", res)
