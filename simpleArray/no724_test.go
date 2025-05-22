@@ -2,6 +2,7 @@ package simpleArray
 
 import "testing"
 
+// no. 724
 func TestPivotIndex(t *testing.T) {
 	cases := []struct {
 		Name     string
